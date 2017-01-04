@@ -38,12 +38,8 @@ module.exports = generators.Base.extend({
             this.log(chalk.red('Error'), 'arg `cmpName` NOT found!');
             return;
         }
-        // git 仓库 component
-        // http://git.biketo.com.cn/front-end/biketo_project_static.git
-        // cmpnt = 'git@git.biketo.com.cn:front-end/'+cmpnt ;
         // cmpnt = 'git@github.com:general-cmps/'+cmpnt ;
-        // git@git.biketo.com.cn:FE-COM/vue-form.git
-        cmpnt = 'git@git.biketo.com.cn:FE-COM/'+cmpnt ;
+        cmpnt = 'http://git.biketo.com.cn/FE-COM/'+ cmpnt +'.git' ;
         
         // 通过 bower 下载
         this.bowerInstall(cmpnt, {
